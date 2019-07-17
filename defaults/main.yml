@@ -18,3 +18,4 @@ kibana_elasticsearch_username: ""
 kibana_elasticsearch_password: ""
 
 kibana_plugins_bin: /usr/share/kibana/bin/kibana-plugin
+kibana_plugins: []
