@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-kibana.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-kibana)
 
-An Ansible Role that installs Kibana on RedHat/CentOS or Debian/Ubuntu.
+An Ansible Role that installs Kibana on RedHat/CentOS or Debian/Ubuntu. It is modified to install old 5.x Kibana branch; for newer versions use original role.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    kibana_version: "6.x"
+    kibana_version: "5.x"
 
 The version of kibana to install.
 
@@ -44,6 +44,11 @@ The URL (including port) over which Kibana will connect to Elasticsearch.
     kibana_elasticsearch_password: ""
 
 If Elasticsearch is protected by HTTP basic authentication, set the username and password so Kibana can connect.
+
+You can also install additional Kibana plugins by setting:
+
+    kibana_plugins:
+      - x-pack
 
 ## Dependencies
 
